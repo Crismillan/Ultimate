@@ -33,13 +33,13 @@ public class ServletUsuario extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
             if(request.getParameter("guardar")!=null){
-               String nombre=request.getParameter("usuario");
-               String apepat=request.getParameter("clave");
-               String telefono=request.getParameter("fecha");
+               String usuario=request.getParameter("usuario");
+               String clave=request.getParameter("clave");
+               String fecha=request.getParameter("fecha");
                Usuario user=new Usuario();
-               user.setUsuario(nombre);
-               user.setClave(apepat);
-               user.setFecha(telefono);
+               user.setUsuario(usuario);
+               user.setClave(clave);
+               user.setFecha(fecha);
                user.GuardarUsuario();
                //REDIRECCIONAR A INDEX.JSP DeSPUES DE GUARDAR
                response.sendRedirect("Usuario/index.jsp");

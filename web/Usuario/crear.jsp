@@ -48,24 +48,24 @@
                         <h1 class="cover-heading">Usuarios</h1>
                         <p class="lead">                 <!Cuerpo >
 
-
+                                <table class="table table-bordered">
                                  <form method="POST" action="../ServletUsuario">
                              <div class="form-group">
-                                 <label for="nombre">Nombre </label>
+                                 <label for="nombre">Usuario</label>
                                  <input type="text" class="form-control" name="usuario" id="nombre" placeholder="Ingresar Nombre">
                              </div>
                               <div class="form-group">
-                                 <label for="nombre">1er Apellido</label>
+                                 <label for="nombre">Clave</label>
                                  <input type="text" class="form-control" name="clave" id="nombre" placeholder="Ingresar Nombre">
                              </div>
                               <div class="form-group">
-                                 <label for="nombre">2do Apellido</label>
+                                 <label for="nombre">Fecha</label>
                                  <input type="text" class="form-control" name="fecha" id="nombre" placeholder="Ingresar Nombre">
                              </div>
                               
                              <td><input type="submit" name="guardar" value="guardar"></td>
                          </form>
-
+                                </table>
                             
 
                         </p>

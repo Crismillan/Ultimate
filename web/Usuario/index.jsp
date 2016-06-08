@@ -43,11 +43,12 @@
                             </nav>
                         </div>
                     </div>
-
+<div class="panel-body">
+    
+    <br><br><br>
                     <div class="inner cover">
                         <h1 class="cover-heading">Usuarios</h1>
-                        <p class="lead">
-
+                        <p class="lead"></p>
 
                         <table class="table table-bordered">
 
@@ -70,33 +71,25 @@
                                         out.println("<td>" + con.getResultado().getString("clave") + "</td>");
                                         out.println("<td>" + con.getResultado().getString("fecha") + "</td>");
                                         out.println("<td>"+"<a href='editar.jsp?editar="+con.getResultado().getString("usuario_id")+"' class='btn btn-green'>Editar</a>"+"</td>");
-
                                                 
                                         out.println("</tr>");
                                     }
-
                                 %>         
+                                
+                                
                             </tbody>
+                            
                         </table> 
-                        </p>
-
-                        <p class="lead">
-
-                            <a href="crear.jsp" class="btn btn-primary">NUEVO USUARIO</a>
-
-                        </p>
+                       
                     </div>
-
-                    <div class="mastfoot">
-                        <div class="inner">
-
+                                <a href="crear.jsp" class="btn btn-primary">nuevo</a>
 
 
                         </div>
                     </div>
 
                 </div>
-
+                                    
             </div>
 
         </div>
