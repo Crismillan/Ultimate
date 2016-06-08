@@ -45,47 +45,44 @@
                         </div>
                     </div>
 
-                    <div class="inner cover">
-                        <h1 class="cover-heading">Usuarios</h1>
-                        <p class="lead">                 <!Cuerpo >
-                        <div class="panel-body">
-
-
-                           </div>
-                    <% 
-                        int id=Integer.parseInt(request.getParameter("editar"));
-                        Coneccion con=new Coneccion();
-                        con.setConsulta("select * from Usuarios where usuario_id='"+id+"'");
-                    %>
                     <div class="panel-body">
-                        <% while(con.getResultado().next()){  %>
-                        
-                        <form method="POST" action="../ServletUsuario?editar=si">
-                            
-                            <!-- OJO CON EL CAMPO READONLY QUE ES ENVIADO POR EL FORMULARIO PARA ACTUALIZAR -->
-                            <input type="text" readonly="true" value='<% out.println(""+con.getResultado().getString("usuario_id")); %>' name="id">
-                            <div class="form-group">
-                                <label for="nombre">Nombre </label>
-                                <input type="text" class="form-control" name="nombre" value='<% out.println(""+con.getResultado().getString("nombre")); %>' id="nombre" placeholder="Ingresar Nombre">
-                            </div>
-                             <div class="form-group">
-                                <label for="nombre">1er Apellido</label>
-                                <input type="text" class="form-control" name="apepat" value='<% out.println(""+con.getResultado().getString("apepat")); %>' id="nombre" placeholder="Ingresar Nombre">
-                            </div>
-                             <div class="form-group">
-                                <label for="nombre">2do Apellido</label>
-                                <input type="text" class="form-control" name="apemat" value='<% out.println(""+con.getResultado().getString("apemat")); %>' id="nombre" placeholder="Ingresar Nombre">
-                            </div>
-                             <div class="form-group">
-                                <label for="nombre">Ciudad</label>
-                                <input type="text" class="form-control" name="ciudad_id" value='<% out.println(""+con.getResultado().getString("ciudad_id")); %>' id="nombre" placeholder="Ingresar Nombre">
-                            </div>
-                            
-                            <button type="submit" class="btn btn-default">ACTUALIZAR</button>
-                        </form>
-                       <% } %> 
+                        <h1 class="table table-bordered">Usuarios</h1>
+                        <p class="lead">                 <!Cuerpo >
+                        <div class="">
 
-                    </div>
+
+                        </div>
+                        <%
+                            int id = Integer.parseInt(request.getParameter("editar"));
+                            Coneccion con = new Coneccion();
+                            con.setConsulta("select * from Usuarios where usuario_id='" + id + "'");
+                        %>
+                        <div class="panel-body">
+                            <% while (con.getResultado().next()) {  %>
+
+                            <form method="POST" action="../ServletUsuario?editar=si">
+
+
+                                <!-- OJO CON EL CAMPO READONLY QUE ES ENVIADO POR EL FORMULARIO PARA ACTUALIZAR -->
+                                <input type="text" readonly="true" value='<% out.println("" + con.getResultado().getString("usuario_id")); %>' name="id">
+                                <div class="form-group">
+                                    <label for="nombre">Usuario </label>
+                                    <input type="text" class="form-control" name="nombre" value='<% out.println("" + con.getResultado().getString("usuario")); %>' id="nombre" placeholder="Ingresar Nombre">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nombre">Clave/label>
+                                        <input type="text" class="form-control" name="clave" value='<% out.println("" + con.getResultado().getString("clave")); %>' id="nombre" placeholder="Ingresar Nombre">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nombre">Fecha</label>
+                                            <input type="text" class="form-control" name="fecha" value='<% out.println("" + con.getResultado().getString("fecha")); %>' id="nombre" placeholder="Ingresar Nombre">
+                                        </div>
+
+                                        <td><input type="submit" name="editar" value="Actualizar"></td>
+                                        </form>
+                                        <% }%> 
+
+                                </div>
 
                         </div>
                         </p>

@@ -44,7 +44,23 @@ public class ServletUsuario extends HttpServlet {
                //REDIRECCIONAR A INDEX.JSP DeSPUES DE GUARDAR
                response.sendRedirect("Usuario/index.jsp");
                
-        }
+        }else if(request.getParameter("editar")!=null){
+                    
+               int usuario_id=Integer.parseInt(request.getParameter("usuario_id"));
+               String usuario=request.getParameter("nombre");
+               String clave=request.getParameter("clave");
+               String fecha=request.getParameter("fecha");
+               Usuario user=new Usuario();
+               
+               user.setUsuario_id(usuario_id);
+               user.setUsuario(usuario);
+               user.setClave(clave);
+               user.setFecha(fecha);
+               user.ActualizarUsuario();
+               
+                 response.sendRedirect("Usuario/index.jsp");
+               
+           }
             
             
             
