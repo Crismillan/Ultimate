@@ -1,3 +1,4 @@
+<%@page import="accesodato.Coneccion"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -46,51 +47,43 @@
                     <div class="inner cover">
                         <h1 class="cover-heading">Usuarios</h1>
                         <p class="lead">
-                        
-                            
-                            <table class="table table-bordered">
-                                
-                                <thead>
-                                <th>ID</th>
-                                <th>NOMBRE</th>
-                                <th>1erAPELLIDO</th>
-                                <th>2doAPELLIDO</th>
-                                <th>Ciudad</th>
-                                <th>Acciones</th>
+
+
+                        <table class="table table-bordered">
+
+                            <thead>
+                            <th>ID</th>
+                            <th>NOMBRE</th>
+                            <th>1erAPELLIDO</th>
+                            <th>2doAPELLIDO</th>
+                            <th>Ciudad</th>
+                            <th>Acciones</th>
                             </thead>
                             <tbody>
-                                <th>ID</th>
-                                <th>NOMBRE</th>
-                                <th>1erAPELLIDO</th>
-                                <th>2doAPELLIDO</th>
-                                <th>Ciudad</th>
-                                <th>Acciones</th>
-                                
-                                
-                                
+                                <%
+                                    Coneccion con = new Coneccion();
+                                    con.setConsulta("select * from usuarios where estado='activo'");
+                                    while (con.getResultado().next()) {
+                                        out.println("<tr>");
+                                        out.println("<td>" + con.getResultado().getString("usuario_id") + "</td>");
+                                        out.println("<td>" + con.getResultado().getString("usuario") + "</td>");
+                                        out.println("<td>" + con.getResultado().getString("clave") + "</td>");
+                                        out.println("<td>" + con.getResultado().getString("fecha") + "</td>");
+                                        out.println("<td>"+"<a href='editar.jsp?editar="+con.getResultado().getString("usuario_id")+"' class='btn btn-green'>Editar</a>"+"</td>");
+
+                                                
+                                        out.println("</tr>");
+                                    }
+
+                                %>         
                             </tbody>
-                            
-                            
-                            
-                                
- </table>
-                        
-                        
-                        
-                            
-                            
+                        </table> 
                         </p>
 
-
-
-
-
                         <p class="lead">
-                            
-                            
-                            
-                      <a href="crear.jsp" class="btn btn-primary">NUEVO USUARIO</a>
-                            
+
+                            <a href="crear.jsp" class="btn btn-primary">NUEVO USUARIO</a>
+
                         </p>
                     </div>
 

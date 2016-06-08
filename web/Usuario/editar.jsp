@@ -1,3 +1,4 @@
+<%@page import="accesodato.Coneccion"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -34,7 +35,7 @@
                             <nav>
                                 <ul class="nav masthead-nav">
                                     <li class="active"><a href="../index.jsp">Inicio</a></li>
-                                    
+
                                     <li><a href="../Usuario/index.jsp">Usuario</a></li>
                                     <li><a href="#">Pokemon</a></li>
                                     <li><a href="#">Habilidad</a></li>
@@ -47,37 +48,52 @@
                     <div class="inner cover">
                         <h1 class="cover-heading">Usuarios</h1>
                         <p class="lead">                 <!Cuerpo >
-                            <div class="panel-body">
+                        <div class="panel-body">
+
+
+                           </div>
+                    <% 
+                        int id=Integer.parseInt(request.getParameter("editar"));
+                        Coneccion con=new Coneccion();
+                        con.setConsulta("select * from Usuarios where usuario_id='"+id+"'");
+                    %>
+                    <div class="panel-body">
+                        <% while(con.getResultado().next()){  %>
                         
-          
-                        <form method="POST" action="../ServletUsuario">
-                             <div class="form-group">
-                                 <label for="nombre">Nombre </label>
-                                 <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresar Nombre">
-                             </div>
-                              <div class="form-group">
-                                 <label for="nombre">1er Apellido</label>
-                                 <input type="text" class="form-control" name="apepat" id="nombre" placeholder="Ingresar Nombre">
-                             </div>
-                              <div class="form-group">
-                                 <label for="nombre">2do Apellido</label>
-                                 <input type="text" class="form-control" name="apemat" id="nombre" placeholder="Ingresar Nombre">
-                             </div>
-                              <div class="form-group">
-                                 <label for="nombre">Ciudad</label>
-                                <input type="text" class="form-control" name="ciudad_id" id="nombre" placeholder="Ingresar Nombre">
+                        <form method="POST" action="../ServletUsuario?editar=si">
+                            
+                            <!-- OJO CON EL CAMPO READONLY QUE ES ENVIADO POR EL FORMULARIO PARA ACTUALIZAR -->
+                            <input type="text" readonly="true" value='<% out.println(""+con.getResultado().getString("usuario_id")); %>' name="id">
+                            <div class="form-group">
+                                <label for="nombre">Nombre </label>
+                                <input type="text" class="form-control" name="nombre" value='<% out.println(""+con.getResultado().getString("nombre")); %>' id="nombre" placeholder="Ingresar Nombre">
                             </div>
-                             
-                             <button type="submit" class="btn btn-default">Guardar</button>
-                         </form>
+                             <div class="form-group">
+                                <label for="nombre">1er Apellido</label>
+                                <input type="text" class="form-control" name="apepat" value='<% out.println(""+con.getResultado().getString("apepat")); %>' id="nombre" placeholder="Ingresar Nombre">
+                            </div>
+                             <div class="form-group">
+                                <label for="nombre">2do Apellido</label>
+                                <input type="text" class="form-control" name="apemat" value='<% out.println(""+con.getResultado().getString("apemat")); %>' id="nombre" placeholder="Ingresar Nombre">
+                            </div>
+                             <div class="form-group">
+                                <label for="nombre">Ciudad</label>
+                                <input type="text" class="form-control" name="ciudad_id" value='<% out.println(""+con.getResultado().getString("ciudad_id")); %>' id="nombre" placeholder="Ingresar Nombre">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-default">ACTUALIZAR</button>
+                        </form>
+                       <% } %> 
 
                     </div>
+
+                        </div>
                         </p>
 
                         <p class="lead">
-                            
-                      <a href="index.jsp" class="btn btn-primary">Volver</a>
-                            
+
+                            <a href="index.jsp" class="btn btn-primary">Volver</a>
+
                         </p>
                     </div>
 
@@ -103,3 +119,12 @@
 
     </body>
 </html>
+
+
+
+
+
+
+
+
+

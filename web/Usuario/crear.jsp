@@ -34,7 +34,7 @@
                             <nav>
                                 <ul class="nav masthead-nav">
                                     <li class="active"><a href="../index.jsp">Inicio</a></li>
-                                    
+
                                     <li><a href="../Usuario/index.jsp">Usuario</a></li>
                                     <li><a href="#">Pokemon</a></li>
                                     <li><a href="#">Habilidad</a></li>
@@ -47,37 +47,33 @@
                     <div class="inner cover">
                         <h1 class="cover-heading">Usuarios</h1>
                         <p class="lead">                 <!Cuerpo >
-                            <div class="panel-body">
-                        
-          
-                        <form method="POST" action="../ServletUsuario">
+
+
+                                 <form method="POST" action="../ServletUsuario">
                              <div class="form-group">
                                  <label for="nombre">Nombre </label>
-                                 <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresar Nombre">
+                                 <input type="text" class="form-control" name="usuario" id="nombre" placeholder="Ingresar Nombre">
                              </div>
                               <div class="form-group">
                                  <label for="nombre">1er Apellido</label>
-                                 <input type="text" class="form-control" name="apepat" id="nombre" placeholder="Ingresar Nombre">
+                                 <input type="text" class="form-control" name="clave" id="nombre" placeholder="Ingresar Nombre">
                              </div>
                               <div class="form-group">
                                  <label for="nombre">2do Apellido</label>
-                                 <input type="text" class="form-control" name="apemat" id="nombre" placeholder="Ingresar Nombre">
+                                 <input type="text" class="form-control" name="fecha" id="nombre" placeholder="Ingresar Nombre">
                              </div>
-                              <div class="form-group">
-                                 <label for="nombre">Ciudad</label>
-                                <input type="text" class="form-control" name="ciudad_id" id="nombre" placeholder="Ingresar Nombre">
-                            </div>
-                             
-                             <button type="submit" class="btn btn-default">Guardar</button>
+                              
+                             <td><input type="submit" name="guardar" value="guardar"></td>
                          </form>
 
-                    </div>
+                            
+
                         </p>
 
                         <p class="lead">
-                            
-                      <a href="index.jsp" class="btn btn-primary">Volver</a>
-                            
+
+                            <a href="index.jsp" class="btn btn-primary">Volver</a>
+
                         </p>
                     </div>
 
