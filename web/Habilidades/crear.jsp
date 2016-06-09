@@ -12,14 +12,11 @@
         <title>Cover Template for Bootstrap</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="template/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../template/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
-        <link href="template/css/cover.css" rel="stylesheet">
-
-
+        <link href="../template/css/cover.css" rel="stylesheet">
     </head>
-
     <body>
 
         <div class="site-wrapper">
@@ -33,8 +30,9 @@
                             <h3 class="masthead-brand">Centro Pokemon</h3>
                             <nav>
                                 <ul class="nav masthead-nav">
-                                    <li class="active"><a href="#">Inicio</a></li>
-                                    <li><a href="Usuario/index.jsp">Usuario</a></li>
+                                    <li class="active"><a href="../index.jsp">Inicio</a></li>
+
+                                    <li><a href="Usuarios/index.jsp">Usuario</a></li>
                                     <li><a href="Pokemones/index.jsp">Pokemon</a></li>
                                     <li><a href="Habilidades/index.jsp">Habilidad</a></li>
                                     <li><a href="Tipos/index.jsp">Tipos</a></li>
@@ -42,34 +40,36 @@
                             </nav>
                         </div>
                     </div>
-
+                    <form method="POST" action="../ServletHabilidad">
                     <div class="inner cover">
-                        <h1 class="cover-heading">  Calendario  .</h1>
-                        <p class="lead"></p>
+                        <h1 class="cover-heading">Habilidades</h1>
+                        <p class="lead">                 <!Cuerpo >
+
+                                <table class="table table-bordered">
+                                    
+                                
+                             <div class="form-group">
+                                 <label for="nombre">Nombre</label>
+                                 <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresar Nombre">
+                             </div>
+                              
+                             <td><input type="submit" name="guardar4" value="guardar"></td>
+                         
+                                </table>
+                        </p>
+
+                        <p class="lead">
+
+                            <a href="index.jsp" class="btn btn-primary">Volver</a>
+                        </p>
                     </div>
-                    
-        <div class="container">
-            <br><br><br>
-         
-    <div class="col-sm-6" style="height:130px;">
-        <div class="form-group">
-            <div class='input-group date' id='datetimepicker9'>
-                <input type='text' class="form-control" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar">
-                    </span>
-                </span>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
-        $(function () {
-            $('#datetimepicker9').datetimepicker({
-                viewMode: 'years'
-            });
-        });
-    </script>
-</div>     
+                            </form>
+                        
+                    <div class="mastfoot">
+                        <div class="inner">
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -80,7 +80,7 @@
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="template/js/bootstrap.min.js"></script>
+        <script src="../template/js/bootstrap.min.js"></script>
 
     </body>
 </html>

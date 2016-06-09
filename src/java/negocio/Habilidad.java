@@ -48,16 +48,16 @@ public class Habilidad {
     
     public void GuardarHabilidad(){
     
-    con.setConsulta("insert into Habilidades(nombre,estado) values('"+this.getNombre()+"','activo')  ");
+    con.setInsertar("insert into Habilidades(nombre,estado) values('"+this.getNombre()+"','activo')  ");
     }
     
     public void BorrarHabilidad(){
-    con.setConsulta("update Habilidades  set estado='pasivo' where habilidad_id='"+this.getHabilidad_id() +"'");
+    con.setInsertar("update Habilidades  set estado='pasivo' where habilidad_id='"+this.getHabilidad_id() +"'");
     
     }
     
     public void ActualizarHabilidad(){
-    con.setConsulta("update Habilidades set nombre='"+this.getNombre() +"',set estado='pasivo' where habilidad_id='"+this.getHabilidad_id() +"' ");
+    con.setInsertar("update Habilidades set nombre='"+this.getNombre() +"',estado='activo' where habilidad_id='"+this.getHabilidad_id() +"' ");
     
     
     }
