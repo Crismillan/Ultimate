@@ -40,7 +40,7 @@
                             </nav>
                         </div>
                     </div>
-                    <form method="POST" action="ServletUsuario">
+                    <form method="POST" action="../ServletUsuario">
                     <div class="inner cover">
                         <h1 class="cover-heading">Usuarios</h1>
                         <p class="lead">                 <!Cuerpo >
