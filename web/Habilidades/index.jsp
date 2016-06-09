@@ -35,10 +35,10 @@
                             <nav>
                                 <ul class="nav masthead-nav">
                                     <li class="active"><a href="../index.jsp">Inicio</a></li>
-                                    <li><a href="Usuarios/index.jsp">Usuario</a></li>
-                                    <li><a href="Pokemones/index.jsp">Pokemon</a></li>
-                                    <li><a href="Habilidades/index.jsp">Habilidad</a></li>
-                                    <li><a href="Tipos/index.jsp">Tipos</a></li>
+                                    <li><a href="../Usuarios/index.jsp">Usuario</a></li>
+                                    <li><a href="../Pokemones/index.jsp">Pokemon</a></li>
+                                    <li><a href="../Habilidades/index.jsp">Habilidad</a></li>
+                                    <li><a href="../Tipos/index.jsp">Tipos</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -78,7 +78,7 @@
                         </table> 
                        
                     </div>
-                                <a href="crear.jsp" class="btn btn-primary">nuevo</a>
+                               <a href="../index.jsp"class="btn btn-danger">Volver</a>   <a href="crear.jsp" class="btn btn-primary">nuevo</a>
 
 
                         </div>

@@ -31,14 +31,15 @@
 
                     <div class="masthead clearfix">
                         <div class="inner">
-                            <h3 class="masthead-brand">Centro Pokemon</h3>
+                             
+                           <h3 class="masthead-brand">Centro Pokemon</h3>
                             <nav>
                                 <ul class="nav masthead-nav">
                                     <li class="active"><a href="../index.jsp">Inicio</a></li>
-                                    <li><a href="Usuarios/index.jsp">Usuario</a></li>
-                                    <li><a href="Pokemones/index.jsp">Pokemon</a></li>
-                                    <li><a href="#">Habilidad</a></li>
-                                    <li><a href="#">Tipos</a></li>
+                                    <li><a href="../Usuarios/index.jsp">Usuario</a></li>
+                                    <li><a href="../Pokemones/index.jsp">Pokemon</a></li>
+                                    <li><a href="../Habilidades/index.jsp">Habilidad</a></li>
+                                    <li><a href="../Tipos/index.jsp">Tipos</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -54,10 +55,10 @@
 
                             <thead>
                             <th>ID</th>
-                            <th>NOMBRE</th>
-                            <th>1erAPELLIDO</th>
-                            <th>2doAPELLIDO</th>
-                            <th>Ciudad</th>
+                            <th>Usuario</th>
+                            <th>Clave</th>
+                            <th>Fecha</th>
+                           
                             <th>Acciones</th>
                             </thead>
                             <tbody>
@@ -82,7 +83,7 @@
                         </table> 
                        
                     </div>
-                                <a href="crear.jsp" class="btn btn-primary">nuevo</a>
+                              <a href="../index.jsp"class="btn btn-danger">Volver</a>   <a href="crear.jsp" class="btn btn-primary">nuevo</a>
 
 
                         </div>
