@@ -72,13 +72,13 @@ public class Usuario {
     }
     
     public void BorrarUsuario(){
-    con.setConsulta("update usuarios  set estado='pasivo' where usuario_id='"+this.getUsuario_id() +"'");
+    con.setInsertar("update usuarios  set estado='pasivo' where usuario_id='"+this.getUsuario_id() +"'");
     
     }
     
     public void ActualizarUsuario(){
      
-     con.setInsertar("UPDATE usuarios SET usuario= '"+this.getUsuario()+"',clave= '"+this.getClave()+"',fecha= '"+this.getFecha()+"',estado= 'activo' where usuario_id='"+this.getUsuario_id() +"'");
+     con.setInsertar("UPDATE usuarios SET usuario='"+this.getUsuario()+"',clave= '"+this.getClave()+"',fecha= '"+this.getFecha()+"',estado= 'activo' where usuario_id='"+this.getUsuario_id() +"'");
  
     }
     

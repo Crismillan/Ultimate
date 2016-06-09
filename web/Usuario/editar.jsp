@@ -36,7 +36,7 @@
                                 <ul class="nav masthead-nav">
                                     <li class="active"><a href="../index.jsp">Inicio</a></li>
 
-                                    <li><a href="../Usuario/index.jsp">Usuario</a></li>
+                                    <li><a href="Usuarios/index.jsp">Usuario</a></li>
                                     <li><a href="#">Pokemon</a></li>
                                     <li><a href="#">Habilidad</a></li>
                                     <li><a href="#">Tipos</a></li>

@@ -10,7 +10,7 @@ public class Pokemon {
     private int numero;
     private int tipo_id;
     private String Estado;
-    private String creado_por;
+    private int creado_por;
 
     Coneccion con;
 
@@ -66,40 +66,27 @@ public class Pokemon {
         this.Estado = Estado;
     }
 
-    public String getCreado_por() {
+    public int getCreado_por() {
         return creado_por;
     }
 
-    public void setCreado_por(String creado_por) {
+    public void setCreado_por(int creado_por) {
         this.creado_por = creado_por;
     }
 
-    public Coneccion getCon() {
-        return con;
-    }
-
-    public void setCon(Coneccion con) {
-        this.con = con;
-    }
     
-    
- 
-    
-    
-     
     public void GuardarPokemon(){
     
-    con.setConsulta("insert into Habilidades(nombre,fecha_nacimiento,numero,tipo_id,estado,creado_por) values('"+this.getNombre()+"','"+this.getFecha_nacimiento()+"','"+this.getNumero()+"','"+this.getTipo_id() +"', activo','"+this.getCreado_por() +"')  ");
+    con.setInsertar("insert into pokemones(nombre,fecha_nacimiento,numero,tipo_id,estado,creado_por) values('"+this.getNombre() +"','"+this.getFecha_nacimiento()+"','"+this.getNumero()+"','"+this.getTipo_id()+"','activo','"+this.getCreado_por() +"')");
     }
     
     public void BorrarPokemon(){
-    con.setConsulta("update Habilidades  set estado='pasivo' where habilidad_id='"+this.getPokemon_id() +"'");
+    con.setInsertar("update pokemones  set estado='pasivo' where pokemon_id='"+this.getPokemon_id() +"'");
     
     }
     
     public void ActualizarPokemon(){
-    con.setConsulta("update Habilidades set nombre='"+this.getNombre() +"',set fecha_nacimiento='"+this.getFecha_nacimiento() + "',set numero'"+this.getNumero() +"',set tipo_id'"+this.getTipo_id()+"' ,set estado='pasivo',set creado_por='"+this.getCreado_por() +"' where habilidad_id='"+this.getPokemon_id() +"' ");
-    
+    con.setInsertar("Update pokemones SET nombre='"+this.getNombre()+"',numero='"+this.getNumero()+"',fecha_nacimiento='"+this.getFecha_nacimiento()+"',tipo_id='"+this.getTipo_id()+"',estado='activo',creado_por='"+this.getCreado_por()+"' where pokemon_id='"+this.getPokemon_id()+"'   ");
     }
     
 }

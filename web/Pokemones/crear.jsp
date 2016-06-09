@@ -32,36 +32,46 @@
                                 <ul class="nav masthead-nav">
                                     <li class="active"><a href="../index.jsp">Inicio</a></li>
 
-                                    <li><a href="Usuarios/index.jsp">Usuario</a></li>
-                                    <li><a href="#">Pokemon</a></li>
+                                    <li><a href="../Usuario/index.jsp">Usuario</a></li>
+                                    <li><a href="../Pokemones/index.jsp">Pokemon</a></li>
                                     <li><a href="#">Habilidad</a></li>
                                     <li><a href="#">Tipos</a></li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
-                    <form method="POST" action="../ServletUsuario">
+                    <form method="POST" action="../ServletPokemon">
                     <div class="inner cover">
-                        <h1 class="cover-heading">Usuarios</h1>
+                        <h1 class="cover-heading">Pokemon</h1>
+                        
                         <p class="lead">                 <!Cuerpo >
 
                                 <table class="table table-bordered">
                                     
                                 
                              <div class="form-group">
-                                 <label for="nombre">Usuario</label>
-                                 <input type="text" class="form-control" name="usuario" id="nombre" placeholder="Ingresar Nombre">
+                                 <label for="nombre">Pokemon</label>
+                                 <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresar Nombre">
                              </div>
                               <div class="form-group">
-                                 <label for="nombre">Clave</label>
-                                 <input type="text" class="form-control" name="clave" id="nombre" placeholder="Ingresar Nombre">
+                                 <label for="nombre">Numero</label>
+                                 <input type="text" class="form-control" name="numero" id="nombre" placeholder="Ingresar Nombre">
                              </div>
                               <div class="form-group">
-                                 <label for="nombre">Fecha</label>
+                                 <label for="nombre">Fecha Nacimiento</label>
                                  <input type="text" class="form-control" name="fecha" id="nombre" placeholder="Ingresar Nombre">
                              </div>
+                               <div class="form-group">
+                                 <label for="nombre">Tipo</label>
+                                 <input type="text" class="form-control" name="tipo" id="nombre" placeholder="Ingresar Nombre">
+                             </div>
+                                    <div class="form-group">
+                                 <label for="nombre">Creado Por</label>
+                                 <input type="text" class="form-control" name="creado" id="nombre" placeholder="Ingresar Nombre">
+                             </div>
+                                    
                               
-                             <td><input type="submit" name="guardar" value="guardar"></td>
+                             <td><input type="submit" name="guardar2" value="guardar"></td>
                          
                                 </table>
                         </p>
