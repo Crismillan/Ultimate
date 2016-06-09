@@ -44,13 +44,6 @@ public class Coneccion {
         return rs;
     }
 
-    
-    
-    
-    
-    
-    
-    
     public void setInsertar(String sql){
          try {
              stmt=con.createStatement();

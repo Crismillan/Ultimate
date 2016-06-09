@@ -46,7 +46,7 @@ public class ServletUsuario extends HttpServlet {
                
         }else if(request.getParameter("editar")!=null){
                     
-               int usuario_id=Integer.parseInt(request.getParameter("usuario_id"));
+               int usuario_id=Integer.parseInt(request.getParameter("id"));
                String usuario=request.getParameter("nombre");
                String clave=request.getParameter("clave");
                String fecha=request.getParameter("fecha");
@@ -58,14 +58,9 @@ public class ServletUsuario extends HttpServlet {
                user.setFecha(fecha);
                user.ActualizarUsuario();
                
-                 response.sendRedirect("Usuario/index.jsp");
+               response.sendRedirect("Usuario/index.jsp");
                
            }
-            
-            
-            
-            
-            
         }
     }
 

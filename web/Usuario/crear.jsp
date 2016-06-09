@@ -16,10 +16,7 @@
 
         <!-- Custom styles for this template -->
         <link href="../template/css/cover.css" rel="stylesheet">
-
-
     </head>
-
     <body>
 
         <div class="site-wrapper">
@@ -43,13 +40,14 @@
                             </nav>
                         </div>
                     </div>
-
+                    <form method="POST" action="ServletUsuario">
                     <div class="inner cover">
                         <h1 class="cover-heading">Usuarios</h1>
                         <p class="lead">                 <!Cuerpo >
 
                                 <table class="table table-bordered">
-                                 <form method="POST" action="../ServletUsuario">
+                                    
+                                
                              <div class="form-group">
                                  <label for="nombre">Usuario</label>
                                  <input type="text" class="form-control" name="usuario" id="nombre" placeholder="Ingresar Nombre">
@@ -64,24 +62,19 @@
                              </div>
                               
                              <td><input type="submit" name="guardar" value="guardar"></td>
-                         </form>
+                         
                                 </table>
-                            
-
                         </p>
 
                         <p class="lead">
 
                             <a href="index.jsp" class="btn btn-primary">Volver</a>
-
                         </p>
                     </div>
-
+                            </form>
+                        
                     <div class="mastfoot">
                         <div class="inner">
-
-
-
                         </div>
                     </div>
 
