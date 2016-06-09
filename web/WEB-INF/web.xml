@@ -8,6 +8,10 @@
         <servlet-name>ServletPokemon</servlet-name>
         <servlet-class>ServletPokemon</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletTipo</servlet-name>
+        <servlet-class>ServletTipo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletUsuario</servlet-name>
         <url-pattern>/ServletUsuario</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ServletPokemon</servlet-name>
         <url-pattern>/ServletPokemon</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletTipo</servlet-name>
+        <url-pattern>/ServletTipo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

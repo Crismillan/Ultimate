@@ -6,8 +6,9 @@ public class Tipos {
     private int tipo_id;
     private String nombre;
     private String estado;
-    private String Habilidad;
+    private int Habilidad;
     Coneccion con;
+    
     public Tipos(){
         con=new Coneccion();
     }
@@ -36,21 +37,33 @@ public class Tipos {
         this.estado = estado;
     }
 
-    public String getHabilidad() {
+    public int getHabilidad() {
         return Habilidad;
     }
 
-    public void setHabilidad(String Habilidad) {
+    public void setHabilidad(int Habilidad) {
         this.Habilidad = Habilidad;
     }
 
-    public Coneccion getCon() {
-        return con;
+     public void GuardarTipos(){
+    
+    con.setInsertar("insert into Tipos(nombre,habilidad_id,estado) values('"+this.getNombre()+"','"+this.getHabilidad()+"','activo')");
     }
-
-    public void setCon(Coneccion con) {
-        this.con = con;
+    
+    public void BorrarTipos(){
+    con.setInsertar("update pokemones  set estado='pasivo' where pokemon_id='"+this.getTipo_id() +"'");
+    
     }
+    
+    public void ActualizarTipos(){
+            
+    con.setInsertar("UPDATE tipos SET nombre='"+this.getNombre()+"',habilidad_id='"+this.getHabilidad()+"',estado= 'activo' where tipo_id='"+this.getTipo_id() +"'");
+ 
+            
+    }
+    
+    
+    
     
     
 }
